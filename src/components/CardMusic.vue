@@ -1,12 +1,11 @@
 <template>
 <div class="container">
-  <div class="row">
+  <div class="boxes">
 
-   <div class="col-2"
+   <div class="disposition-card mb-3 mx-2 "
     v-for="(cdMusic, index) in CardMusic " 
     :key="`cdMusic-${index}`"
     >
-    
       <Card 
         :image="cdMusic.poster"
         :title="cdMusic.title"
@@ -14,6 +13,7 @@
         :text="cdMusic.genre"
         :subText="cdMusic.year"
       />
+
    </div>
   </div>
 </div>
@@ -54,5 +54,14 @@ data() {
 </script>
 
 <style scoped lang="scss">
+ .boxes {
+     display: flex;  
+     flex-wrap: wrap; 
+     justify-content: center;
+     width: 100%;
+     } 
 
+    .disposition-card {
+        width: calc(100% / 9);
+    }
 </style>

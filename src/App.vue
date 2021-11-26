@@ -1,8 +1,10 @@
 <template>
 <div id="app">
+  <section>
   <Header />
+  <CardMusic />
 
-   <CardMusic />
+  </section>
 </div>
 </template>
 
@@ -21,4 +23,9 @@ export default {
 
 <style lang="scss">
 @import '@/styles/globals';
+section {
+  background-color: $bg-color-2;
+  height: 920px;
+}
+
 </style>

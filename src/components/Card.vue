@@ -1,10 +1,12 @@
 <template>
-  <div class="sist">
+  <div class=" bg p-3  card h-100 ">
         <img :src="image" :alt="title">
-     <h3> {{title}} </h3>
-     <h4> {{subTitle}} </h4>
-     <h5> {{text}} </h5>
-    <span>{{subText}} </span>
+        <div class=" text-card  text-center" >
+           <h3> {{title}} </h3>
+           <h4> {{subTitle}} </h4>
+           <span>{{subText}} </span>
+           <h5> {{text}} </h5>
+        </div>
   </div>
 </template>
 
@@ -23,15 +25,42 @@ props: {
 
 <style  scoped lang="scss">
 @import '@/styles/globals';
+@import '@/styles/variables';
 
-img {
-    width: 199px; 
-    display: flex;
-    justify-content: space-between;
-    padding: 23px;
-    margin-top: 202px;
-  }
- .sist {
-   background: $bg-color;
+
+  img{ 
+    width: 100%;
+   
+}
+
+ h3 {
+    font-size: $h3; 
+   text-transform: uppercase;
+ } 
+
+ h4 {
+   font-size: $h4;
+    color: $text-color;
  }
+ h5 {
+   font-size: $h4;
+   
+ }
+ span {
+   font-size: $span;
+   color: $text-color;
+ }
+
+ .card {
+   background: $bg-color;
+   
+
+ }
+ 
+.text-card {
+    text-transform: uppercase;
+     margin-top: 0.8rem ;
+     margin-bottom: 1.5rem; 
+     color: $title-color;
+}
 </style>
