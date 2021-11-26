@@ -10,10 +10,10 @@
 
 
     <option value="">All genres</option>
-    <option value="">rock</option>
-    <option value="">pop</option>
-    <option value="">jazz</option>
-    <option value="">Metal</option>
+    <option value="rock">rock</option>
+    <option value="pop">pop</option>
+    <option value="jazz">jazz</option>
+    <option value="metal">Metal</option>
   </select>
 
 </div>
