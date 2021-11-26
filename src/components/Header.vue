@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
 export default {
 name: 'Header'
 }
@@ -23,6 +24,7 @@ name: 'Header'
 
 <style scoped lang="scss">
 @import '@/styles/variables.scss';
+
 
 .bg {
      background-color: $bg-color;

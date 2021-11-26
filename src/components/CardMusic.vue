@@ -3,7 +3,7 @@
   <div class="boxes">
 
    <div class="disposition-card mb-3 mx-2 "
-    v-for="(cdMusic, index) in CardMusic " 
+    v-for="(cdMusic, index) in  cdMusic " 
     :key="`cdMusic-${index}`"
     >
       <Card 
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+
 import Card from '@/components/Card.vue';
 
 export default {
@@ -31,25 +31,10 @@ components: {
 
 },
 
-data() {
-    return {
-         CardMusic: null,
-        };
-  },
-  created() {
-     this.getCreateCardMusic();
-  },
-  methods: {
-      getCreateCardMusic() {
-        
-        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-        .then(result =>{
-             console.log(result.data); 
-            this.CardMusic = result.data.response
-        })
-        .catch(err => console.log(err));
-      }
-  }
+props: {
+  cdMusic: Array
+}
+
 };
 </script>
 
