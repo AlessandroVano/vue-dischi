@@ -1,7 +1,8 @@
 <template>
 <div id="app">
   <section>
-  <Header />
+                 <!--vado a prendere il testo che ho utilizzato dentro al @change nella select dell'header e lo inserisco qui ed eseguo quello che metto nel metodo (in questo caso nel metodo 'ricercaGenere')   -->
+  <Header     @scelta="ricercaGenere" />
   <CardMusic :cdMusic="CardMusic"/>
 
   </section>
@@ -24,6 +25,8 @@ export default {
          CardMusic: null,
         };
   },
+
+
   created() {
      this.getCreateCardMusic();
   },
@@ -37,7 +40,11 @@ export default {
         })
         .catch(err => console.log(err));
       },
+      ricercaGenere() {
+     console.log('emit evento');
+      },
   },
+
 }
 </script>
 
