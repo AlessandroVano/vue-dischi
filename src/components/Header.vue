@@ -3,7 +3,12 @@
 <div class="bg ">
   <img class="m-2" src="../assets/logo.png" alt="">
 
-  <select class="m-2" name="" id="">
+  <select 
+     class="m-2"
+     v-model="sceltaGenere"
+     @change="$emit('scelta', sceltaGenere)">
+
+
     <option value="">All genres</option>
     <option value="">rock</option>
     <option value="">pop</option>
@@ -18,8 +23,15 @@
 <script>
 
 export default {
-name: 'Header'
+name: 'Header',
+
+data() {
+  return {
+        sceltaGenere: '',
+    }
+  }
 }
+
 </script>
 
 <style scoped lang="scss">
